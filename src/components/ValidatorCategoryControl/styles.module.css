@@ -1,0 +1,22 @@
+.categoryWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.categoryName {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.validators {
+    margin-left: 20px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.separator {
+    height: 1px;
+    border-bottom: 1px solid #555555;
+}

@@ -1,0 +1,26 @@
+.validatorWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.validatorMainRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.validatorName {
+    flex-grow: 1;
+}
+
+.validatorValue {
+
+}
+
+.validatorId {
+    font-weight: bold;
+}
+
+.validatorDescription {
+    font-style: italic;
+}

@@ -1,0 +1,16 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.subtitle {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.examplesContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
