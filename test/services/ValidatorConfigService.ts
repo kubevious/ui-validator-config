@@ -3,11 +3,10 @@ import { Promise } from 'the-promise';
 
 import {
     IValidatorConfigService,
-    ValidatorIdBody,
     ValidatorItem
 } from '@kubevious/ui-middleware/dist/services/validator-config';
 
-import { ValidatorID, ValidatorSetting, ValidationConfig, DEFAULT_VALIDATION_CONFIG } from '@kubevious/entity-meta'
+import { ValidatorID, ValidationConfig, DEFAULT_VALIDATION_CONFIG } from '@kubevious/entity-meta'
 
 
 export class ValidatorConfigService implements IValidatorConfigService {
@@ -21,13 +20,14 @@ export class ValidatorConfigService implements IValidatorConfigService {
     {
         const item : ValidatorItem = {
             validator: validatorId,
-            setting: DEFAULT_VALIDATION_CONFIG[validatorId]
+            setting: DEFAULT_VALIDATION_CONFIG[validatorId]!
         }
         return Promise.resolve(item);
     }
 
     updateValidator(item: ValidatorItem) : Promise<void>
     {
+        console.log(item);
         return Promise.resolve();
     }
 
