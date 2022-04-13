@@ -1,5 +1,5 @@
 import _ from 'the-lodash';
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import { InnerPage, PageHeader } from '@kubevious/ui-components';
 
 import { useService } from '@kubevious/ui-framework';
@@ -50,7 +50,7 @@ export const ValidatorsPage = () => {
             
                 {VALIDATORS_METADATA.categories.map((categoryMeta, index) => {
 
-                    return <>
+                    return <Fragment key={index}>
                         {(categoryMeta.validators.length > 0) &&
                             <ValidatorCategoryControl 
                                     key={index}
@@ -61,7 +61,7 @@ export const ValidatorsPage = () => {
                                     }}
                                     />
                         }
-                    </>; 
+                    </Fragment>; 
                 })}
                 
             </div>}
