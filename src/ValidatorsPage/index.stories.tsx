@@ -1,7 +1,7 @@
 import { app } from '@kubevious/ui-framework';
 import { MemoryRouter } from 'react-router-dom';
-import { Story, storiesOf } from '@storybook/react';
-import React, { useEffect } from 'react';
+import { Story } from '@storybook/react';
+import React from 'react';
 import { ValidatorConfigService } from '../../test/services/ValidatorConfigService';
 
 import { ValidatorsPage } from './';
@@ -10,7 +10,11 @@ export default {
     title: 'ValidatorsPage',
     component: ValidatorsPage,
     decorators: [
-        (getStory: any) => <MemoryRouter>{getStory()}</MemoryRouter>,
+        (Story: any) => (
+            <MemoryRouter>
+                <Story />
+            </MemoryRouter>
+        ),
     ]
 };
 
